@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ProfileController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,7 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    $data=3;
-    return view('welcome',['data'=>$data]);
-});
+// Route::get('/', function () {
+//     $data=3;
+//     return view('welcome',['data'=>$data]);
+// });
+Route::get('/', [ProfileController::class, 'index'])->name('profile.index');
