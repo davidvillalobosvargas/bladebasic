@@ -44,7 +44,13 @@
                         </g>
                     </svg>
                 </div>
-                <h1>{{ $data }}</h1>
+                @if ($data===0)
+                <h1>{{ $data }} cero</h1>
+                @elseif ($data>3)
+                <h1>{{ $data }} elseif</h1>
+                @else
+                <h1>{{ $data }} else</h1>
+                @endif
                 <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
                     <div class="grid grid-cols-1 md:grid-cols-2">
                         <div class="p-6">

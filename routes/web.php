@@ -14,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $data='123';
+    $data=3;
     return view('welcome',['data'=>$data]);
 });
