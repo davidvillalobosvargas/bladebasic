@@ -17,4 +17,5 @@ use App\Http\Controllers\ProfileController;
 //     $data=3;
 //     return view('welcome',['data'=>$data]);
 // });
-Route::get('/', [ProfileController::class, 'index'])->name('profile.index');
+// Route::get('/', [ProfileController::class, 'index'])->name('profile.index');
+Route::view('/', 'child');
